@@ -2,14 +2,14 @@ import React from 'react';
 
 import config from '../config/index.json';
 
-const About = () => {
-  const { company, about } = config;
+const Contact = () => {
+  const { company, contact } = config;
   const { logo, name: companyName } = company;
-  const { socialMedia, sections } = about;
+  const { socialMedia, sections } = contact;
 
   return (
     <div
-      id="about"
+      id="contact"
       className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12"
     >
       <div className="flex flex-col items-center justify-center">
@@ -90,4 +90,4 @@ const About = () => {
     </div>
   );
 };
-export default About;
+export default Contact;

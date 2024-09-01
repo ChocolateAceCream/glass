@@ -18,14 +18,14 @@
       "href": "pricing"
     },
     {
-      "name": "About",
-      "href": "about"
+      "name": "Contact",
+      "href": "contact"
     }
   ],
   "mainHero": {
     "title": "Elite Glass and Windows ",
     "subtitle": "(Unikoo Shower Doors)",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "description": "Here at Elite Glass and Windows (Unikoo Shower Doors), we strive to provide our customers with accessibility and variety. Our staff is trained to uphold the utmost professionalism while striving to provide you with quality glass and hardware tailored just for you at the most competitive prices. Our experienced team is able to provide all of our clients with completely custom made orders for any enclosure. The possibilities are endless.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",
@@ -117,7 +117,7 @@
       }
     ]
   },
-  "about": {
+  "contact": {
     "sections": [
       {
         "name": "Tel: +1 425-890-8233",
