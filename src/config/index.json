@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "Elite Glass and Windows",
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
@@ -22,13 +22,9 @@
       "href": "about"
     }
   ],
-  "callToAction": {
-    "text": "Get started",
-    "href": "#"
-  },
   "mainHero": {
-    "title": "Use me as your",
-    "subtitle": "landing page.",
+    "title": "Elite Glass and Windows ",
+    "subtitle": "(Unikoo Shower Doors)",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
@@ -37,7 +33,7 @@
     },
     "secondaryAction": {
       "text": "Email us",
-      "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
+      "href": "mailto:seattle@unikoogroup.com?subject=Request from homepage"
     }
   },
   "product": {
@@ -124,30 +120,26 @@
   "about": {
     "sections": [
       {
-        "name": "Something",
+        "name": "Tel: +1 425-890-8233",
         "href": "#",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
-        "name": "Something",
+        "name": "Email: seattle@unikoogroup.com",
         "href": "#",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
+        "name": "Address: 4028 148th Ave NE, Redmond, WA",
+        "href": "https://www.google.com/maps?q=4028+148th+Ave+NE,+Redmond,+WA",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       }
     ],
     "socialMedia": {
       "github": "https://github.com/ChocolateAceCream",
       "twitter": "https://twitter.com/ChocolateAceCream",
-      "linkedin": "https://www.linkedin.com/in/di-sheng-4b69b280/"
+      "linkedin": "https://www.linkedin.com/in/di-sheng-4b69b280/",
+      "facebook": "https://www.facebook.com/UnikooShowerDoor"
     }
   }
 }
