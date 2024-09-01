@@ -1,11 +1,13 @@
 import React from 'react';
 
+import { TextField, InputAdornment } from '@mui/material';
+
 import config from '../config/index.json';
 
 const Pricing = () => {
   const { pricing } = config;
   const { items, title } = pricing;
-  const [firstPlan, secondPlan, thirdPlan] = items;
+  const [firstPlan] = items;
 
   return (
     <section className={`bg-background py-8`} id="pricing">
@@ -30,7 +32,17 @@ const Pricing = () => {
               className={`flex-1 bg-background text-gray-600 rounded-t rounded-b-none overflow-hidden shadow`}
             >
               <div className={`p-8 text-3xl font-bold text-center border-b-4`}>
-                {firstPlan?.name}
+                <TextField
+                  label="With normal TextField"
+                  id="outlined-start-adornment"
+                  slotProps={{
+                    input: {
+                      startAdornment: (
+                        <InputAdornment position="start">kg</InputAdornment>
+                      ),
+                    },
+                  }}
+                />
               </div>
               <ul className={`w-full text-center text-sm`}>
                 {firstPlan?.features.map((feature) => (
@@ -54,7 +66,7 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className={`flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-background mt-4 sm:-mt-6 shadow-lg z-10`}
           >
             <div
@@ -116,7 +128,7 @@ const Pricing = () => {
                 <span className={`text-base`}> {thirdPlan?.priceDetails}</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
