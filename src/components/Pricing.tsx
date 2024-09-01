@@ -1,13 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { TextField, InputAdornment } from '@mui/material';
+import { TextField, InputAdornment, MenuItem } from '@mui/material';
 
-import config from '../config/index.json';
+const glassTypeOptions = [
+  {
+    value: 'Float',
+    label: 'Float',
+  },
+  {
+    value: 'Tempered',
+    label: 'Tempered',
+  },
+];
 
 const Pricing = () => {
-  const { pricing } = config;
-  const { items, title } = pricing;
-  const [firstPlan] = items;
+  const [height, setHeight] = useState<number>(0);
+  const [width, setWidth] = useState<number>(0);
+  const [glassType, setGlassType] = useState<string>('Tempered');
+  const [price, setPrice] = useState<number>(0);
+
+  const calculatePrice = (h: number, w: number, t: string) => {
+    let newPrice = 0;
+    if (h > 0 && w > 0) {
+      newPrice = h * w;
+      if (t === 'Tempered') {
+        newPrice *= 2;
+      } else {
+        newPrice *= 4;
+      }
+    }
+    setPrice(newPrice);
+  };
+
+  const handleHeightChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newHeight = parseFloat(event.target.value) || 0; // Convert to number
+    setHeight(newHeight);
+    calculatePrice(newHeight, width, glassType);
+  };
+
+  const handleWidthChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newWidth = parseFloat(event.target.value) || 0; // Convert to number
+    setWidth(newWidth);
+    calculatePrice(height, newWidth, glassType);
+  };
+
+  const handleGlassTypeChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newGlassType = event.target.value;
+    setGlassType(newGlassType);
+    calculatePrice(height, width, newGlassType);
+  };
 
   return (
     <section className={`bg-background py-8`} id="pricing">
@@ -15,7 +58,7 @@ const Pricing = () => {
         <h1
           className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
         >
-          {title}
+          Pricing
         </h1>
         <div className={`w-full mb-4`}>
           <div
@@ -31,29 +74,65 @@ const Pricing = () => {
             <div
               className={`flex-1 bg-background text-gray-600 rounded-t rounded-b-none overflow-hidden shadow`}
             >
-              <div className={`p-8 text-3xl font-bold text-center border-b-4`}>
+              <div className={`p-4 text-3xl font-bold text-center`}>
                 <TextField
-                  label="With normal TextField"
+                  label="Width"
                   id="outlined-start-adornment"
                   slotProps={{
                     input: {
                       startAdornment: (
-                        <InputAdornment position="start">kg</InputAdornment>
+                        <InputAdornment position="start">Inch</InputAdornment>
                       ),
                     },
+                    htmlInput: {
+                      min: 1, // Minimum value to ensure only positive numbers
+                      step: 1, // Step value to ensure only integer numbers
+                      inputMode: `"numeric"`, // Mobile-friendly numeric keyboard
+                    },
                   }}
+                  type="number"
+                  style={{ width: '90%' }}
+                  onChange={handleWidthChange}
                 />
               </div>
-              <ul className={`w-full text-center text-sm`}>
-                {firstPlan?.features.map((feature) => (
-                  <li
-                    className={`border-b py-4`}
-                    key={`${firstPlan.name}-${feature}`}
-                  >
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div className={`p-4 text-3xl font-bold text-center`}>
+                <TextField
+                  label="Height"
+                  id="outlined-start-adornment"
+                  slotProps={{
+                    input: {
+                      startAdornment: (
+                        <InputAdornment position="start">Inch</InputAdornment>
+                      ),
+                    },
+                    htmlInput: {
+                      min: 1, // Minimum value to ensure only positive numbers
+                      step: 1, // Step value to ensure only integer numbers
+                      inputMode: `'numeric'`, // Mobile-friendly numeric keyboard
+                    },
+                  }}
+                  type="number"
+                  style={{ width: '90%' }}
+                  onChange={handleHeightChange}
+                />
+              </div>
+              <div className={`p-4 text-3xl font-bold text-center`}>
+                <TextField
+                  id="outlined-select-glass-type"
+                  select
+                  label="Glass Type"
+                  defaultValue="Tempered"
+                  helperText="Please select glass type"
+                  style={{ width: '90%' }}
+                  onChange={handleGlassTypeChange}
+                >
+                  {glassTypeOptions.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </div>
             </div>
             <div
               className={`flex-none mt-auto bg-background rounded-b rounded-t-none overflow-hidden shadow p-6`}
@@ -61,8 +140,8 @@ const Pricing = () => {
               <div
                 className={`w-full pt-6 text-3xl text-gray-600 font-bold text-center`}
               >
-                {firstPlan?.price}
-                <span className={`text-base`}> {firstPlan?.priceDetails}</span>
+                Total Cost: ${price}
+                {/* <span className={`text-base`}> {firstPlan?.priceDetails}</span> */}
               </div>
             </div>
           </div>
