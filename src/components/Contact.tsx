@@ -16,6 +16,7 @@ const Contact = () => {
         <div>
           <img src={logo} alt={companyName} className="w-16 h-16" />
         </div>
+
         <div className="flex flex-wrap sm:gap-10 gap-2 items-center justify-center mt-4 h-12">
           {sections.map((section, index) => (
             <a
@@ -26,6 +27,13 @@ const Contact = () => {
               {section.name}
             </a>
           ))}
+        </div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.007454111913!2d-118.00699848481796!3d34.07057408060568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ca14a5b4e4d3%3A0xf84bc8e7b4f4e929!2s4028%20148th%20Ave%20NE%2C%20Redmond%2C%20WA%2098052!5e0!3m2!1sen!2sus!4v1616010825589!5m2!1sen!2sus"
+            className="map w-full md:w-96 h-72 md:h-96 mb-6 md:mr-6 rounded-md shadow-lg"
+            loading="lazy"
+          ></iframe>
         </div>
         <div className="flex items-center gap-x-8 mt-6 h-8">
           <a
