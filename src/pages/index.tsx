@@ -2,8 +2,8 @@ import React from 'react';
 
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
+import Catalog from '../components/Catalog';
 import Contact from '../components/Contact';
-import Features from '../components/Features';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
@@ -34,7 +34,7 @@ const App = () => {
       </LazyShow>
       <LazyShow>
         <>
-          <Features />
+          <Catalog />
           <Canvas />
         </>
       </LazyShow>

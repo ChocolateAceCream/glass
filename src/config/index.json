@@ -9,8 +9,8 @@
       "href": "product"
     },
     {
-      "name": "Features",
-      "href": "features"
+      "name": "Catalog",
+      "href": "catalog"
     },
 
     {
@@ -37,44 +37,59 @@
     }
   },
   "product": {
-    "title": "React landing page 2021",
+    "title": "Our Products",
     "items": [
       {
-        "title": "A plug n play template",
+        "title": "Custom Frameless Shower Doors",
         "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
-        "img": "/assets/images/product1.jpg"
+        "img": "/assets/images/p1.jpg"
       },
       {
-        "title": "Make it your own!",
+        "title": "Windows",
+        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
+        "img": "/assets/images/p2.jpg"
+      },
+      {
+        "title": "Glass Railings",
+        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
+        "img": "/assets/images/p3.jpg"
+      },
+      {
+        "title": "Store Fronts",
+        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
+        "img": "/assets/images/p4.jpg"
+      },
+      {
+        "title": "Glass Mirrors And More!",
         "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
-        "img": "/assets/images/product2.jpg"
+        "img": "/assets/images/p5.jpg"
       }
     ]
   },
-  "features": {
+  "catalog": {
     "title": "Latest & greatest ",
-    "subtitle": "All the best technologies out there!",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "subtitle": "Your Glass Expert!",
+    "description": "Click to download",
     "items": [
       {
-        "name": "React.js",
+        "name": "Shower Door Catalog",
         "description": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components.",
-        "icon": "/assets/images/react.png"
+        "url": "https://www.unikoogroup.com/Catalog/ShowerDoorCatalog.pdf"
       },
       {
-        "name": "Tailwind",
+        "name": "Railing System Catalog",
         "description": "Tailwind CSS is a highly customizable, low-level CSS framework for quickly creating beautiful designs without any annoying opinionated stylesheet nonsense.",
-        "icon": "/assets/images/tailwindcss.svg"
+        "url": "https://www.unikoogroup.com/Catalog/RailingSystemCatalog.pdf"
       },
       {
-        "name": "Next.js",
+        "name": "Hardware Catalog",
         "description": "Next.js is a framework for server-rendered React applications using Next.js.",
-        "icon": "/assets/images/nextjs.svg"
+        "url": "https://www.unikoogroup.com/Catalog/HardwareCatalog.pdf"
       },
       {
-        "name": "Typescript",
+        "name": "Art Glass Catalog",
         "description": "TypeScript is a programming language developed and maintained by Microsoft.",
-        "icon": "/assets/images/ts.png"
+        "url": "https://www.unikoogroup.com/Catalog/ArtGlassCatalog.pdf"
       }
     ]
   },
