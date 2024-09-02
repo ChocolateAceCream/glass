@@ -5,7 +5,7 @@ import Divider from './Divider';
 
 const Product = () => {
   const { product } = config;
-  const [item1, item2, item3, item4, item5] = product.items;
+  const [item1, item2, item3, item4] = product.items;
 
   return (
     <section className={`bg-background py-8`} id="product">
@@ -77,19 +77,6 @@ const Product = () => {
               </h3>
               <p className={`text-gray-600 mb-8`}>{item4?.description}</p>
             </div>
-          </div>
-        </div>
-        <div className={`flex flex-wrap`}>
-          <div className={`w-5/6 sm:w-1/2 p-6 mt-20`}>
-            <h3
-              className={`text-3xl text-gray-800 font-bold leading-none mb-3`}
-            >
-              {item5?.title}
-            </h3>
-            <p className={`text-gray-600`}>{item5?.description}</p>
-          </div>
-          <div className={`w-full sm:w-1/2 p-6`}>
-            <img className="h-6/6" src={item5?.img} alt={item5?.title} />
           </div>
         </div>
       </div>

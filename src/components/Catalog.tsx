@@ -29,12 +29,12 @@ const Catalog = () => {
             {catalogList.map((feature) => (
               <div
                 key={feature.name}
-                className="relative min-h-[60px] flex items-center justify-center border-2 border-red-500 text-red-500 hover:bg-red-100  hover:text-red-700 transition-colors duration-300 "
+                className="relative min-h-[60px] flex items-center justify-center border-2 border-primary rounded-lg text-primary hover:bg-blue-100  hover:text-primary transition-colors duration-300 "
               >
                 <Link
                   href={feature.url}
                   underline="none"
-                  className=" text-lg font-semibold py-6 px-8 rounded-md hover:border-b-0 text-red-500"
+                  className=" text-lg font-semibold py-6 px-8 rounded-md hover:border-b-0 text-primary"
                 >
                   {feature.name}
                 </Link>
