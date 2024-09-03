@@ -4,12 +4,16 @@ import { TextField, InputAdornment, MenuItem, Link } from '@mui/material';
 
 const glassTypeOptions = [
   {
-    value: 'Float',
-    label: 'Float',
+    value: 'Clear',
+    label: 'Clear',
   },
   {
-    value: 'Tempered',
-    label: 'Tempered',
+    value: 'Texture',
+    label: 'Texture',
+  },
+  {
+    value: 'Mirror',
+    label: 'Mirror',
   },
 ];
 
@@ -23,7 +27,7 @@ const Pricing = () => {
     let newPrice = 0;
     if (h > 0 && w > 0) {
       newPrice = h * w;
-      if (t === 'Tempered') {
+      if (t === 'Clear') {
         newPrice *= 2;
       } else {
         newPrice *= 4;
