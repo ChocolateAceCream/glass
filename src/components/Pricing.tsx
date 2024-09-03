@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { TextField, InputAdornment, MenuItem } from '@mui/material';
+import { TextField, InputAdornment, MenuItem, Link } from '@mui/material';
 
 const glassTypeOptions = [
   {
@@ -140,8 +140,19 @@ const Pricing = () => {
               <div
                 className={`w-full pt-6 text-3xl text-gray-600 font-bold text-center`}
               >
-                Total Cost: ${price}
+                Estimated Cost: ${price}
                 {/* <span className={`text-base`}> {firstPlan?.priceDetails}</span> */}
+              </div>
+              <div>
+                For detailed quote, please fill the&nbsp;
+                <Link
+                  href="/assets/documents/quote_form.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  form
+                </Link>
+                &nbsp; and email back to us
               </div>
             </div>
           </div>
